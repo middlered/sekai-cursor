@@ -1,0 +1,147 @@
+.sekai-cursor-host {
+    /*
+      These variables hold complete CSS cursor declarations.
+      JavaScript fills them with: url("...") x y, fallback
+      Defaults are plain system cursors, so no asset request happens before init.
+    */
+    --sekai-cursor-default: auto;
+    --sekai-cursor-button: pointer;
+    --sekai-cursor-button-active: pointer;
+    --sekai-cursor-input: text;
+    --sekai-cursor-forbidden: not-allowed;
+    --sekai-cursor-progress: progress;
+    --sekai-cursor-help: help;
+    --sekai-cursor-wait: wait;
+    --sekai-cursor-crosshair: crosshair;
+    --sekai-cursor-move: move;
+    --sekai-cursor-ew: ew-resize;
+    --sekai-cursor-ns: ns-resize;
+    --sekai-cursor-nwse: nwse-resize;
+    --sekai-cursor-nesw: nesw-resize;
+    --sekai-cursor-up: default;
+    --sekai-cursor-person: pointer;
+    --sekai-cursor-pin: pointer;
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static,
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-normal {
+    cursor: var(--sekai-cursor-default);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-clickable,
+.sekai-cursor-host.sekai-cursor-mode-static a,
+.sekai-cursor-host.sekai-cursor-mode-static button,
+.sekai-cursor-host.sekai-cursor-mode-static select,
+.sekai-cursor-host.sekai-cursor-mode-static [role="button"],
+.sekai-cursor-host.sekai-cursor-mode-static label[for],
+.sekai-cursor-host.sekai-cursor-mode-static summary,
+.sekai-cursor-host.sekai-cursor-mode-static option {
+    cursor: var(--sekai-cursor-button);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-pin,
+.sekai-cursor-host.sekai-cursor-mode-static a:active,
+.sekai-cursor-host.sekai-cursor-mode-static button:active,
+.sekai-cursor-host.sekai-cursor-mode-static [role="button"]:active {
+    cursor: var(--sekai-cursor-button-active);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-input,
+.sekai-cursor-host.sekai-cursor-mode-static input,
+.sekai-cursor-host.sekai-cursor-mode-static textarea,
+.sekai-cursor-host.sekai-cursor-mode-static [contenteditable="true"] {
+    cursor: var(--sekai-cursor-input);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-input-focus,
+.sekai-cursor-host.sekai-cursor-mode-static input:focus,
+.sekai-cursor-host.sekai-cursor-mode-static textarea:focus,
+.sekai-cursor-host.sekai-cursor-mode-static [contenteditable="true"]:focus {
+    cursor: var(--sekai-cursor-input);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-disabled,
+.sekai-cursor-host.sekai-cursor-mode-static [disabled],
+.sekai-cursor-host.sekai-cursor-mode-static [data-forbidden="true"],
+.sekai-cursor-host.sekai-cursor-mode-static [data-forbidden="true"]:hover,
+.sekai-cursor-host.sekai-cursor-mode-static [data-forbidden="true"]:active,
+.sekai-cursor-host.sekai-cursor-mode-static [data-forbidden="true"]:focus {
+    cursor: var(--sekai-cursor-forbidden);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-progress,
+.sekai-cursor-host.sekai-cursor-mode-static [aria-busy="true"],
+.sekai-cursor-host.sekai-cursor-mode-static [aria-busy="true"]:hover {
+    cursor: var(--sekai-cursor-progress);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-help {
+    cursor: var(--sekai-cursor-help);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-wait {
+    cursor: var(--sekai-cursor-wait);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-crosshair {
+    cursor: var(--sekai-cursor-crosshair);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-move {
+    cursor: var(--sekai-cursor-move);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-ew {
+    cursor: var(--sekai-cursor-ew);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-ns {
+    cursor: var(--sekai-cursor-ns);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-nwse {
+    cursor: var(--sekai-cursor-nwse);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-nesw {
+    cursor: var(--sekai-cursor-nesw);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-not {
+    cursor: var(--sekai-cursor-forbidden);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-up {
+    cursor: var(--sekai-cursor-up);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-person {
+    cursor: var(--sekai-cursor-person);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-static .sekai-cursor-pin {
+    cursor: var(--sekai-cursor-pin);
+}
+
+.sekai-cursor-host.sekai-cursor-mode-animated.sekai-cursor-hidden,
+.sekai-cursor-host.sekai-cursor-mode-animated.sekai-cursor-hidden * {
+    cursor: none !important;
+}
+
+.sekai-cursor-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 9999;
+    transform: translate(-100px, -100px);
+    display: none;
+}
+
+.sekai-cursor-host.sekai-cursor-mode-animated .sekai-cursor-layer {
+    display: block;
+}
